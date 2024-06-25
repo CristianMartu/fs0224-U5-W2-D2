@@ -25,5 +25,18 @@ public class BlogController {
         return this.blogService.saveBlog(blog);
     }
 
+    @GetMapping("/{blogId}")
+    private Blog findById(@PathVariable int blogId){
+        return this.blogService.findById(blogId);
+    }
 
+    @PutMapping("/{blogId}")
+    private Blog updateBlog(@PathVariable int blogId, @RequestBody Blog blog){
+        return this.blogService.updateBlog(blogId, blog);
+    }
+
+    @DeleteMapping("/{blogId}")
+    private void deleteBlog(@PathVariable int blogId){
+        this.blogService.deleteBlog(blogId);
+    }
 }
