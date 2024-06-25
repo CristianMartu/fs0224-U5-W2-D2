@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -16,12 +17,12 @@ import java.time.LocalDate;
 @Setter
 public class Author {
     @Id
-    private int id;
+    private UUID id;
     private String nome;
     private String cognome;
     private String email;
     private LocalDate dataDiNascita;
-    private String avatar; // "https://ui-avatars.com/api/?name=Mario+Rossi"
+    private String avatar;
 
     @Override
     public String toString() {
